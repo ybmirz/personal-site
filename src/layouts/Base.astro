@@ -1,5 +1,6 @@
 ---
 import Footer from '@/components/Footer.astro';
+import TerminalComponent from '@/components/Terminal';
 import Navbar from '@/components/Navbar.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -42,14 +43,15 @@ const {
 		</script>
 	</head>
 	<body
-		class="flex min-h-screen flex-col bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white"
+		class="flex min-h-screen flex-col bg-slate-100 font-mono text-gray-950 dark:bg-black dark:text-white"
 	>
-		<Navbar />
-		<div class="flex-1">
-			<slot />
-		</div>
+		<!-- <Navbar /> -->
 
-		<Footer />
+		<div class=" px-4 py-8">
+			<TerminalComponent client:load />
+		  </div>
+
+		<!-- <Footer /> -->
 	</body>
 </html>
 <style is:global>
